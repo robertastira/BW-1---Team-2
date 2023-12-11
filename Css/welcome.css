@@ -1,0 +1,21 @@
+body {
+  background-image: url(../Assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 85px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h3 {
+  color: #d20094;
+}
+
+#logo {
+  width: 15%;
+}
