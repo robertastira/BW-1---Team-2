@@ -1,26 +1,19 @@
 body{
-    background-color: black;
+    background-image: url(/Css/Assets/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 65px;
 }
 
 
-#wrapper {
-    display: flex;
-    position: absolute;
-    background-image: url("/Css/Assets/bg.jpg");
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 65%;
-    height: 100%;
-
-
+#wrapper { 
+    font-family: font-family: 'Outfit', sans-serif;
 }
+
 
 #wrapper img {
-    margin-left: 100px;
-    margin-top: 50px;
     width: 15%;
-
 }
