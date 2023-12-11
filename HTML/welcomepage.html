@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="/Css/reset.css" />
+    <link rel="stylesheet" href="/Css/welcome.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logodiv">
+        <img src="../Css/Assets/epicode_logo.png"/>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1>Welcome to</h1>
+        <h2>your exam</h2>
+        <h3 id="instructions">Instructions</h3>
+        <p class="testo">
+          We don't expect most engeneers to know the answers to all of these</p>
+          <p class="subtesto">
+          questions, so don't worry if you're unsure of a few of them.
+        </p>
+      </section>
+      <article>
+        <ul id="lista">
+          <li>
+            Each question is <span class="bold"> timed </span> and can only be
+            <span class="bold"> answered once.</span>
+          </li>
+          <li>
+            Changing broswer tab or opening other windiws will
+            <span class="bold">invalidate the question.</span>
+          </li>
+          <li>This exam will take approx. <span class="bold">0-5 minutes.</span></li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      <article>
+        <div id="checkp">
+        <p> <input type="checkbox"/>  I promise to answer myself without help from anyone <button id="button">PROCEED</button></p>
+    </div>
     
-</body>
+      </article>
+    </footer>
+  </body>
 </html>
