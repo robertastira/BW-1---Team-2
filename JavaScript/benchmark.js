@@ -115,7 +115,9 @@ const displayQuestion = function () {
 
     //verifica la risposta
     if (currentQuestion.type === "boolean") {
+      checkBooleanAnswer(currentQuestion, userAnswer);
     } else {
+      checkMultipleChoiseAnswer(currentQuestion, userAnswer);
     }
 
     //passa alla prossima domanda
@@ -123,8 +125,30 @@ const displayQuestion = function () {
     displayQuestion();
   } else {
     //mostra punteggio finale
+    alert("quiz completato, il tuo punteggio è " + score);
+  }
+};
+displayQuestion();
+
+//funzione per verificare le risposte di tipo boolean
+const checkBooleanAnswer = function (question, userAnswer) {
+  if (userAnswer.toLowerCase() === question.correct_answer.toLowerCase()) {
+    alert("Risposta corretta! +1 punto");
+    score++;
+  } else {
+    alert("Risposta errata!");
   }
 };
 
-//funzione per verificare le risposte di tipo boolean
-const checkBooleanAnswer = function (question, userAnswer) {};
+//funzione per verificare le risposte di tipo multiple
+const checkMultipleChoiseAnswer = function (question, userAnswer) {
+  if (
+    question.incorrect_answers.includes(userAnswer) ||
+    userAnswer.toLowerCase() !== question.correct_answer.toLowerCase()
+  ) {
+    alert("Risposta errata!");
+  } else {
+    alert("Risposta corretta! +1 punto");
+    score++;
+  }
+};
