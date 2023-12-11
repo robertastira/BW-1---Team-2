@@ -113,57 +113,65 @@ const displayQuestion = function () {
   if (questionNumber < questions.length) {
     const currentQuestion = questions[questionNumber];
     divQuestions.innerHTML = `<div>${currentQuestion.question}</div>`;
+    //funzione per visualizzare risposte boolean
+    const displayBooleanAnswers = function (question) {
+      const currentQuestion = questions[questionNumber];
+      return `
+      <button type="button" onclick='checkAnswer()'>${currentQuestion.incorrect_answers}</button>
+      <button type="button" onclick='checkAnswer()'>${currentQuestion.correct_answer}</button>
+      `;
+    };
+    //funzione per visualizzare risposte multiple
+    const displayMultipleChoice = function (question) {
+      const currentQuestion = questions[questionNumber];
+      return `
+      <button type="button" onclick='checkAnswer()'>${currentQuestion.correct_answer}</button>
+      <button type="button" onclick='checkAnswer()'>${currentQuestion.incorrect_answers[0]}</button>
+      <button type="button" onclick='checkAnswer()'>${currentQuestion.incorrect_answers[1]}</button>
+      <button type="button" onclick='checkAnswer()'>${currentQuestion.incorrect_answers[2]}</button>
+      `;
+    };
     if (currentQuestion.type === "boolean") {
       buttonAnswerDiv.innerHTML = `${displayBooleanAnswers(currentQuestion)}`;
     } else {
       buttonAnswerDiv.innerHTML = `${displayMultipleChoice(currentQuestion)}`;
     }
 
-    // ${
-    //   currentQuestion.type === "boolean"
-    //     ? displayBooleanAnswers(currentQuestion)
-    //     : displayMultipleChoic(currentQuestion)
-    // }
-    // `;
-
     // //verifica la risposta
-    // if (currentQuestion.type === "boolean") {
-    //   checkBooleanAnswer(currentQuestion, userAnswer);
-    // } else {
-    //   checkMultipleChoiseAnswer(currentQuestion, userAnswer);
-    // }
+
+    const checkAnswer = function (userAnswer) {
+      const currentQuestion = questions[questionNumber];
+      if (userAnswer === currentQuestion.correct_answer) {
+        score++;
+      }
+    };
+    //     alert("Risposta corretta! +1 punto");
+    //   } else {
+    //     alert("Risposta errata!");
+    //   }
+    // };
+    checkAnswer();
 
     //passa alla prossima domanda
     questionNumber++;
     displayQuestion();
-    //   } else {
-    //     //mostra punteggio finale
-    //     alert("quiz completato, il tuo punteggio è " + score);
-    //   }
+  } else {
+    //mostra punteggio finale
+    alert("quiz completato, il tuo punteggio è " + score);
   }
 };
 
-//funzione per visualizzare risposte boolean
-const displayBooleanAnswers = function (question) {
-  const currentQuestion = questions[questionNumber];
-  return `
-    <button>${currentQuestion.incorrect_answers}</button>
-    <button>${currentQuestion.correct_answer}</button>
-    `;
-};
-
-//funzione per visualizzare risposte multiple
-const displayMultipleChoice = function (question) {
-  const currentQuestion = questions[questionNumber];
-  return `
-    <button>${currentQuestion.correct_answer}</button>
-    <button>${currentQuestion.incorrect_answers[0]}</button>
-    <button>${currentQuestion.incorrect_answers[1]}</button>
-    <button>${currentQuestion.incorrect_answers[2]}</button>
-    `;
-};
-
 displayQuestion();
+
+//assegnazione della funzione checkAnswer al click dei bottoni
+// document
+//   .getElementsByTagName("button")
+//   .addEventListener("click", function (event) {
+//     if (event.target.tagName === "BUTTON") {
+//       const selectedAnswer = event.target.textContent;
+//       checkAnswer(selectedAnswer);
+//     }
+//   });
 //funzione per verificare le risposte di tipo boolean
 // const checkBooleanAnswer = function (question, userAnswer) {
 //   if (userAnswer.toLowerCase() === question.correct_answer.toLowerCase()) {
