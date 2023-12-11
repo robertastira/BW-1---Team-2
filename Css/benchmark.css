@@ -1,4 +1,5 @@
 body{
+
     background-image: url(/Css/Assets/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,5 +16,5 @@ body{
 
 
 #wrapper img {
-    width: 15%;
+    width: 20%;
 }
