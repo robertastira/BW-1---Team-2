@@ -108,15 +108,23 @@ let questions = [
 //funzione per visualizzare la domanda corrente
 
 const displayQuestion = function () {
+  const divQuestions = document.getElementById("txtquestion");
   if (questionNumber < questions.length) {
     const currentQuestion = questions[questionNumber];
+    divQuestions.innerHTML = `<div>${currentQuestion.question}</div>`;
 
-    // if (currentQuestion.type === 'multiple')
-    // const userResponse = prompt(currentQuestion.text);
+    //verifica la risposta
+    if (currentQuestion.type === "boolean") {
+    } else {
+    }
 
-    //verifica la risposta dell'utente e aggiorna il punteggio
+    //passa alla prossima domanda
+    questionNumber++;
+    displayQuestion();
+  } else {
+    //mostra punteggio finale
   }
-  const divQuestions = document.getElementById("txtquestion");
 };
 
-console.log(looadQuestions());
+//funzione per verificare le risposte di tipo boolean
+const checkBooleanAnswer = function (question, userAnswer) {};
