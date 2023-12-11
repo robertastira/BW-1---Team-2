@@ -1,7 +1,7 @@
 //dichiarazione variabili globali:
 let score = 0;
 let questionNumber = 0;
-const questions = [
+let questions = [
   {
     category: "Science: Computers",
     type: "multiple",
@@ -109,80 +109,22 @@ const questions = [
 
 const displayQuestion = function () {
   const divQuestions = document.getElementById("txtquestion");
-  const buttonAnswerDiv = document.getElementById("txtnumberedquestion");
   if (questionNumber < questions.length) {
     const currentQuestion = questions[questionNumber];
     divQuestions.innerHTML = `<div>${currentQuestion.question}</div>`;
+
+    //verifica la risposta
     if (currentQuestion.type === "boolean") {
-      buttonAnswerDiv.innerHTML = `${displayBooleanAnswers(currentQuestion)}`;
     } else {
-      buttonAnswerDiv.innerHTML = `${displayMultipleChoice(currentQuestion)}`;
     }
-
-    // ${
-    //   currentQuestion.type === "boolean"
-    //     ? displayBooleanAnswers(currentQuestion)
-    //     : displayMultipleChoic(currentQuestion)
-    // }
-    // `;
-
-    // //verifica la risposta
-    // if (currentQuestion.type === "boolean") {
-    //   checkBooleanAnswer(currentQuestion, userAnswer);
-    // } else {
-    //   checkMultipleChoiseAnswer(currentQuestion, userAnswer);
-    // }
 
     //passa alla prossima domanda
     questionNumber++;
     displayQuestion();
-    //   } else {
-    //     //mostra punteggio finale
-    //     alert("quiz completato, il tuo punteggio è " + score);
-    //   }
+  } else {
+    //mostra punteggio finale
   }
 };
 
-//funzione per visualizzare risposte boolean
-const displayBooleanAnswers = function (question) {
-  const currentQuestion = questions[questionNumber];
-  return `
-    <button>${currentQuestion.incorrect_answers}</button>
-    <button>${currentQuestion.correct_answer}</button>
-    `;
-};
-
-//funzione per visualizzare risposte multiple
-const displayMultipleChoice = function (question) {
-  const currentQuestion = questions[questionNumber];
-  return `
-    <button>${currentQuestion.correct_answer}</button>
-    <button>${currentQuestion.incorrect_answers[0]}</button>
-    <button>${currentQuestion.incorrect_answers[1]}</button>
-    <button>${currentQuestion.incorrect_answers[2]}</button>
-    `;
-};
-
-displayQuestion();
 //funzione per verificare le risposte di tipo boolean
-// const checkBooleanAnswer = function (question, userAnswer) {
-//   if (userAnswer.toLowerCase() === question.correct_answer.toLowerCase()) {
-//     alert("Risposta corretta! +1 punto");
-//     score++;
-//   } else {
-//     alert("Risposta errata!");
-//   }
-// };
-
-//funzione per verificare le risposte di tipo multiple
-// const checkMultipleChoiseAnswer = function (question, userAnswer) {
-//   if (
-//     question.incorrect_answers.includes(userAnswer) ||
-//     userAnswer.toLowerCase() !== question.correct_answer.toLowerCase()
-//   ) {
-//     alert("Risposta errata!");
-//   } else {
-//     alert("Risposta corretta! +1 punto");
-//     score++;
-//   }
-// };
+const checkBooleanAnswer = function (question, userAnswer) {};
