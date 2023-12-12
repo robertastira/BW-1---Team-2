@@ -102,17 +102,17 @@ const divQuestions = document.getElementById("txtquestion");
 const buttonAnswerDiv = document.getElementById("txtnumberedquestion");
 const displayBooleanAnswers = function (question) {
   return `
-      <button type="button" onclick='checkAnswer("${question.incorrect_answers}")'>${question.incorrect_answers}</button>
-      <button type="button" onclick='checkAnswer("${question.correct_answer}")'>${question.correct_answer}</button>
+      <button onclick='checkAnswer("${question.incorrect_answers}")'>${question.incorrect_answers}</button>
+      <button onclick='checkAnswer("${question.correct_answer}")'>${question.correct_answer}</button>
     `;
 };
 
 const displayMultipleChoice = function (question) {
   return `
-      <button type="button" onclick='checkAnswer("${question.correct_answer}")'>${question.correct_answer}</button>
-      <button type="button" onclick='checkAnswer("${question.incorrect_answers[0]}")'>${question.incorrect_answers[0]}</button>
-      <button type="button" onclick='checkAnswer("${question.incorrect_answers[1]}")'>${question.incorrect_answers[1]}</button>
-      <button type="button" onclick='checkAnswer("${question.incorrect_answers[2]}")'>${question.incorrect_answers[2]}</button>
+      <button onclick='checkAnswer("${question.correct_answer}")'>${question.correct_answer}</button>
+      <button onclick='checkAnswer("${question.incorrect_answers[0]}")'>${question.incorrect_answers[0]}</button>
+      <button onclick='checkAnswer("${question.incorrect_answers[1]}")'>${question.incorrect_answers[1]}</button>
+      <button onclick='checkAnswer("${question.incorrect_answers[2]}")'>${question.incorrect_answers[2]}</button>
     `;
 };
 
@@ -140,13 +140,12 @@ const displayQuestion = function () {
 
 const checkAnswer = function (userAnswer) {
   actualQuestion++;
+ 
   const currentQuestion = questions[questionNumber];
   if (userAnswer === currentQuestion.correct_answer) {
     score++;
     alert("Risposta corretta! +1 punto");
-  } else {
-    alert("Risposta errata!");
-  }
+  } else alert("Risposta errata!");
 
   // Passa alla prossima domanda solo se non hai raggiunto la fine del gioco
   if (questionNumber < questions.length - 1) {

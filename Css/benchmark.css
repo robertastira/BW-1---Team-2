@@ -54,6 +54,20 @@ button {
     border-image-width: 5px; /* Larghezza della linea di sfumatura */
 }
 
+button:focus {
+    border-top: 2px solid #900080;
+    transition: 0.05s;
+    width: 40%;
+    height: 5em;
+    border-radius: 30px;
+    font-family:'Outfit', sans-serif;
+    margin-bottom: 3vh;
+    margin-left: 3vw;
+    background-color: #90007f6b; /* Un azzurro semi-trasparente */
+    color: white;
+    border-image-width: 5px; /* Larghezza della linea di sfumatura */
+}
+
 #questions {
     position: absolute;
     bottom: 10%;
@@ -70,4 +84,18 @@ button {
     font-family:'Outfit', sans-serif;
     font-weight: 700;
     font-size: 22px;
+}
+
+.clicked{
+    border-top: 2px solid #dc2cc7;
+    transition: 0.05s;
+    width: 40%;
+    height: 5em;
+    border-radius: 30px;
+    font-family:'Outfit', sans-serif;
+    margin-bottom: 3vh;
+    margin-left: 3vw;
+    background-color: #90007f6b; /* Un azzurro semi-trasparente */
+    color: white;
+    border-image-width: 5px; /* Larghezza della linea di sfumatura */
 }
