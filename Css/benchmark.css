@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap');
+
+
 body{
     background-image: url(/Css/Assets/bg.jpg);
     background-size: cover;
@@ -8,11 +11,6 @@ body{
     margin-top: 65px;
 }
 
-
-#wrapper { font-family: font-family: 'Outfit', sans-serif;
-}
-
-
-#wrapper img {
+body img {
     width: 15%;
 }
