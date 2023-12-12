@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Outfit:wght@600&family=Roboto:ital@1&display=swap');
 *{
     font-family: 'Inter', sans-serif;
-   
+   padding: 0px;
+   margin: 0px;
+
 }
 
 body{
@@ -56,10 +58,22 @@ button{
 #stars{
     margin: 0px; 
     padding: 0px;
+     
 }
 .rating {
     background: url('../Css/Assets/star.svg')
 }
 
+.s{
+padding: 0px;
+margin: 0px; 
 
+}
  
+
+.stars{
+    opacity: 20%;
+}
+.stars.selected{
+    opacity: 100%;
+}
