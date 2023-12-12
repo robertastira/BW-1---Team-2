@@ -120,7 +120,7 @@ var actualQuestion = 1;
 var maxQuestion = questions.length;
 
 const displayQuestion = function () {
-  document.getElementById('questions').innerHTML = 'QUESTION ' + actualQuestion + ' / ' + <p id='purple'>maxQuestion;</p>
+  document.getElementById('questions').innerHTML = 'QUESTION ' + actualQuestion + ' / ' + maxQuestion;
   if (questionNumber < questions.length) {
     const currentQuestion = questions[questionNumber];
     divQuestions.innerHTML = `<div>${currentQuestion.question}</div>`;
