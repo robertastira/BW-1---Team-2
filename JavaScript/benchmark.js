@@ -108,6 +108,39 @@ const questions = [
 //funzione per visualizzare la domanda corrente
 
 const displayQuestion = function () {
+  //   //far partire un timer:
+  //   let totalTime = 0;
+  //   questions.forEach((question) => {
+  //     switch (question.difficulty) {
+  //       case "easy":
+  //         totalTime = 30; //tempo in secondi per domande facili
+  //         break;
+  //       case "medium":
+  //         totalTime = 60; //tempo in secondi per domande medie
+  //         break;
+  //       case "hard":
+  //         totalTime = 120;
+  //     }
+  //   });
+
+  //   const displayTimer = function (totalTime) {
+  //     let timerElement = document.getElementById("timer");
+  //     let secondi = totalTime;
+  //     timerElement.textContent = `${secondi}`;
+  //     countdown(totalTime, timerElement);
+  //   };
+
+  //   //avvia il countdown del timer
+  //   const countdown = function (totalTime, timerElement) {
+  //     let timer = setInterval(() => {
+  //       totalTime--;
+
+  //       if (totalTime <= 0) {
+  //         clearInterval(timer);
+  //       }
+  //     });
+  //   };
+  // displayTimer(totalTime);
   const divQuestions = document.getElementById("txtquestion");
   const buttonAnswerDiv = document.getElementById("txtnumberedquestion");
   if (questionNumber < questions.length) {
@@ -137,51 +170,24 @@ const displayQuestion = function () {
       buttonAnswerDiv.innerHTML = `${displayMultipleChoice(currentQuestion)}`;
     }
 
-    //far partire un timer:
-    let totalTime = 0;
-    questions.forEach((question) => {
-      switch (question.difficulty) {
-        case "easy":
-          totalTime += 30; //tempo in secondi per domande facili
-          break;
-        case "medium":
-          totalTime += 60; //tempo in secondi per domande medie
-          break;
-        case "120":
-          totalTime += 120;
-      }
-    });
+    displayQuestion();
+    // // //verifica la risposta
 
-    displayTimer(totalTime);
-
-    const displayTimer = function (totalTime) {
-      let timerElement = document.getElementById("timer");
-      let secondi = totalTime;
-      timerElement.textContent = `${secondi}`;
-      countdown(totalTime, timerElement);
-    };
-
-    //avvia il countdown del timer
-    const countdown = function ()
-
-    // //verifica la risposta
-
-    const checkAnswer = function (userAnswer) {
-      const currentQuestion = questions[questionNumber];
-      if (userAnswer === currentQuestion.correct_answer) {
-        score++;
-      }
-    };
-    //     alert("Risposta corretta! +1 punto");
-    //   } else {
-    //     alert("Risposta errata!");
+    // const checkAnswer = function (userAnswer) {
+    //   const currentQuestion = questions[questionNumber];
+    //   if (userAnswer === currentQuestion.correct_answer) {
+    //     score++;
     //   }
     // };
-    checkAnswer();
+    // //     alert("Risposta corretta! +1 punto");
+    // //   } else {
+    // //     alert("Risposta errata!");
+    // //   }
+    // // };
+    // checkAnswer();
 
     //passa alla prossima domanda
     questionNumber++;
-    displayQuestion();
   } else {
     //mostra punteggio finale
     alert("quiz completato, il tuo punteggio è " + score);
