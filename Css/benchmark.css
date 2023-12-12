@@ -42,16 +42,16 @@ body img{
 
 button {
     border-top: 2px solid white;
-    transition: 0.03s;
+    transition: 0.05s;
     width: 40%;
-    height: 4em;
+    height: 5em;
     border-radius: 30px;
     font-family:'Outfit', sans-serif;
-    margin-bottom: 3vh;
-    margin-left: 3vw;
-    background-color: rgba(68, 65, 65, 0.11); /* Un azzurro semi-trasparente */
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    background-color: rgba(221, 215, 215, 0.162); /* Un azzurro semi-trasparente */
     color: white;
-    border-image-width: 3px; /* Larghezza della linea di sfumatura */
+    border-image-width: 5px; /* Larghezza della linea di sfumatura */
 }
 
 #questions {
