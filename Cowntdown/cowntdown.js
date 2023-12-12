@@ -16,7 +16,24 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 20;
+/*//
+Settare il TIMER IN BASE ALLA DIFFICOLTA'
+  let TIME_LIMIT = 0;
+  questions.forEach((question) => {
+    switch (question.difficulty) {
+      case "easy":
+        TIME_LIMIT = 30; //tempo in secondi per domande facili
+        break;
+      case "medium":
+        TIME_LIMIT = 60; //tempo in secondi per domande medie
+        break;
+      case "hard":
+        TIME_LIMIT = 120;
+        break;
+    }
+  });
+*/
+let TIME_LIMIT = 40;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -57,7 +74,7 @@ function startTimer() {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = formatTime(
-      timeLeft
+      timeLeft 
     );
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
@@ -75,9 +92,9 @@ function formatTime(time) {
   if (seconds < 10) {
     seconds = `0${seconds}`;
   }
-
-  return `${minutes}:${seconds}`;
+  return `<div id="cowntdown">SECONDI <div id="tempo">${seconds}</div> RIMANENTI</div>`;
 }
+
 
 function setRemainingPathColor(timeLeft) {
   const { alert, warning, info } = COLOR_CODES;
