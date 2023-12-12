@@ -120,7 +120,7 @@ var actualQuestion = 1;
 var maxQuestion = questions.length;
 
 const displayQuestion = function () {
-  document.getElementById('questions').innerHTML = 'QUESTION ' + actualQuestion + ' / ' + maxQuestion;
+  document.getElementById('questions').innerHTML = 'QUESTION ' + actualQuestion + ' / <span class="custom__purple__text">' + maxQuestion + '</span>';
   if (questionNumber < questions.length) {
     const currentQuestion = questions[questionNumber];
     divQuestions.innerHTML = `<div>${currentQuestion.question}</div>`;
@@ -160,4 +160,3 @@ const checkAnswer = function (userAnswer) {
 
 // Avvia il gioco mostrando la prima domanda
 displayQuestion();
-

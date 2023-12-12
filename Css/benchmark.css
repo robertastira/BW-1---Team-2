@@ -47,8 +47,8 @@ button {
     height: 5em;
     border-radius: 30px;
     font-family:'Outfit', sans-serif;
-    margin-bottom: 5vh;
-    margin-left: 5vw;
+    margin-bottom: 3vh;
+    margin-left: 3vw;
     background-color: rgba(221, 215, 215, 0.162); /* Un azzurro semi-trasparente */
     color: white;
     border-image-width: 5px; /* Larghezza della linea di sfumatura */
@@ -65,6 +65,9 @@ button {
     font-size: 1.3em;
 }
 
-#purple {
-    color: #900080
+.custom__purple__text {
+    color: #900080;
+    font-family:'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
 }
