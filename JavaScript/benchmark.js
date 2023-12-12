@@ -99,7 +99,7 @@ const divQuestions = document.getElementById("txtquestion");
 const buttonAnswerDiv = document.getElementById("txtnumberedquestion");
 const displayBooleanAnswers = function (question) {
   return `
-      <button type="button" onclick='checkAnswer("${question.correct_answer}")'>${question.incorrect_answers}</button>
+      <button type="button" onclick='checkAnswer("${question.incorrect_answers}")'>${question.incorrect_answers}</button>
       <button type="button" onclick='checkAnswer("${question.correct_answer}")'>${question.correct_answer}</button>
     `;
 };

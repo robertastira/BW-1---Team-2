@@ -46,6 +46,7 @@ button {
     font-family:'Outfit', sans-serif;
     margin-bottom: 3vh;
     margin-left: 3vw;
-
-
+    background-color: rgba(68, 65, 65, 0.11); /* Un azzurro semi-trasparente */
+    color: white;
+    border-image-width: 3px; /* Larghezza della linea di sfumatura */
 }
