@@ -137,6 +137,33 @@ const displayQuestion = function () {
       buttonAnswerDiv.innerHTML = `${displayMultipleChoice(currentQuestion)}`;
     }
 
+    //far partire un timer:
+    let totalTime = 0;
+    questions.forEach((question) => {
+      switch (question.difficulty) {
+        case "easy":
+          totalTime += 30; //tempo in secondi per domande facili
+          break;
+        case "medium":
+          totalTime += 60; //tempo in secondi per domande medie
+          break;
+        case "120":
+          totalTime += 120;
+      }
+    });
+
+    displayTimer(totalTime);
+
+    const displayTimer = function (totalTime) {
+      let timerElement = document.getElementById("timer");
+      let secondi = totalTime;
+      timerElement.textContent = `${secondi}`;
+      countdown(totalTime, timerElement);
+    };
+
+    //avvia il countdown del timer
+    const countdown = function ()
+
     // //verifica la risposta
 
     const checkAnswer = function (userAnswer) {
@@ -163,6 +190,50 @@ const displayQuestion = function () {
 
 displayQuestion();
 
+// //GRAFICO
+// const graficoCiambella = function (sbagliate, giuste) {
+//   const ctx = document.getElementById("graficoCiambella").getContext("2d");
+
+//   // Dati del grafico
+//   const dati = {
+//     datasets: [
+//       {
+//         data: [sbagliate, giuste], // Valori percentuali per i segmenti del grafico
+//         backgroundColor: ["#D20094", "#00FFFF"], // Colori dei segmenti
+//         borderColor: "white", // Colore del bordo
+//         borderWidth: 2, // Spessore del bordo
+//       },
+//     ],
+//     labels: ["SBAGLIATE", "GIUSTE"],
+//   };
+
+//   // Configurazione del grafico
+//   const options = {
+//     cutoutPercentage: 30,
+//     responsive: false,
+//     plugins: {
+//       datalabels: {
+//         color: "white",
+//         font: {
+//           weight: "bold",
+//         },
+//         // Box shadow per etichette di dati
+//         shadowColor: "rgba(0, 0, 0, 0.3)",
+//         shadowBlur: 10,
+//         shadowOffsetX: 0,
+//         shadowOffsetY: 4,
+//       },
+//     },
+//   };
+
+//   // Crea il grafico a ciambella
+//   const donutChart = new Chart(ctx, {
+//     type: "doughnut",
+//     data: dati,
+//     options: options,
+//   });
+// };
+// graficoCiambella(13, 6);
 //assegnazione della funzione checkAnswer al click dei bottoni
 // document
 //   .getElementsByTagName("button")
