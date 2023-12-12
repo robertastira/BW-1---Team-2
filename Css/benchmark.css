@@ -1,16 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 
 body{
+
     background-image: url(/Css/Assets/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 65px;
+    font-family: 'Outfit', sans-serif;
+    
 }
 
-body img {
+body img{
     width: 15%;
+    margin-bottom: 100px;
+}
+
+#question-container {
+    text-align: center;
+}
+
+#txtquestion {
+    text-align: center;
+}
+
+#txtquestion div {
+    font-size: 2em;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+#txtnumberedquestion {
+    text-align: center;
+    width: 70%;
+    margin: 6vh auto;
+}
+
+button {
+    border-top: 2px solid white;
+    transition: 0.03s;
+    width: 40%;
+    height: 4em;
+    border-radius: 30px;
+    font-family:'Outfit', sans-serif;
+    margin-bottom: 3vh;
+    margin-left: 3vw;
+    background-color: rgba(68, 65, 65, 0.11); /* Un azzurro semi-trasparente */
+    color: white;
+    border-image-width: 3px; /* Larghezza della linea di sfumatura */
+}
+
+#questions {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    color: white;
+    font-size: 1.3em;
+}
+
+#purple {
+    color: #900080
 }
