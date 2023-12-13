@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+body {
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 55px;
+}
+
+body img {
+  width: 15%;
+}
+
+#title {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 70px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+div h2 {
+  margin-top: 0px;
+  font-family: "Inter";
+  font-size: 2em;
+}
+
+article div h2 {
+  margin-top: 0px;
+  font-family: "Inter";
+  font-size: 4em;
+}
+
+article {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+#donut-container {
+  width: 550px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.value {
+  margin-top: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+button {
+  -webkit-box-shadow: 1px 3px 12px 5px rgba(255, 255, 255, 0.45);
+  box-shadow: 1px 3px 12px 5px rgba(255, 255, 255, 0.45);
+  font-size: 1.5em;
+  font-weight: 700;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 0, 0, 0);
+  border: 3px solid white;
+  color: white;
+}
+
+#absolute {
+  position: absolute;
+  padding-top: 130px;
+  text-align: center;
+}
+
+.TitleInside {
+  font-family: "Inter";
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+#color-blue {
+  padding-top: 3px;
+  color: #00ffff;
+}
+
+.micro {
+  font-family: "Inter";
+  font-size: 0.9em;
+  width: 210px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(232, 226, 226);
+}
