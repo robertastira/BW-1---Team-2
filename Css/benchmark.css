@@ -63,7 +63,7 @@ button:focus {
     font-family:'Outfit', sans-serif;
     margin-bottom: 3vh;
     margin-left: 3vw;
-    background-color: #90007f6b; /* Un azzurro semi-trasparente */
+    background-color: #c811b3; /* Un azzurro semi-trasparente */
     color: white;
     border-image-width: 5px; /* Larghezza della linea di sfumatura */
 }
@@ -95,7 +95,7 @@ button:focus {
     font-family:'Outfit', sans-serif;
     margin-bottom: 3vh;
     margin-left: 3vw;
-    background-color: #90007f6b; /* Un azzurro semi-trasparente */
+    background-color: #eb41d7; /* Un azzurro semi-trasparente */
     color: white;
     border-image-width: 5px; /* Larghezza della linea di sfumatura */
 }
