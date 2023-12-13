@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Circular Progress Bar</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/epicode_logo.png" />
+    </header>
+    <main>
+      <div id="title">
+        <h1>Results</h1>
+        <h2>The summary of your answers:</h2>
+      </div>
+      <article>
+        <div class="value">
+          <h2>Correct</h2>
+          <!-- nell'h3 bisogna inserire la percentuale delle risposte esatte -->
+          <h3></h3>
+          <!-- nel p andranno le risposte esatte sul totale es: 6/10 -->
+          <p></p>
+        </div>
+        <div id="donut-container">
+          <div id="absolute">
+            <div class="TitleInside">
+              <h4>Congratulations!</h4>
+              <h4 id="color-blue">You passed the exam.</h4>
+            </div>
+            <div class="micro">
+              <p>We'll send you the certificate in few minutes.</p>
+              <p>Check your email (including promotions / spam folder)</p>
+            </div>
+          </div>
+          <canvas id="myChart" style="height: 500px; width: 700px"></canvas>
+        </div>
+        <div class="value">
+          <h2>Wrong</h2>
+          <!-- nell'h3 bisogna inserire la percentuale delle risposte sbagliate -->
+          <h3></h3>
+          <!-- nel p andranno le risposte esatte sul totale es: 4/10 -->
+          <p></p>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <button onclick="alert('Contattaci su www.epicode.com')">RATE US</button>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
