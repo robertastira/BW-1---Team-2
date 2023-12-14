@@ -43,10 +43,23 @@
     </main>
     <footer>
       <article>
-        <div id="checkp">
-        <p> <input type="checkbox" required />  I promise to answer myself without help from anyone <button onclick="alert('Prosegui con il TEST')" id="button">PROCEED</button></p>
-    </div>
-    </article>
+        <form id="checkp">
+          <p>
+            <input type="checkbox" required /> I promise to answer myself
+            without help from anyone
+          </p>
+        </form>
+        <a href="./benchmarkpage.html">
+          <button
+            type="submit"
+            id="button"
+            form="checkp"
+            onclick="if(document.getElementById('checkp').checkValidity()) window.location.href = './benchmarkpage.html'; return false;"
+          >
+            PROCEED
+          </button>
+        </a>
+      </article>
     </footer>
   </body>
 </html>
