@@ -284,6 +284,7 @@ let maxQuestion = questions.length;
 const displayQuestion = function () {
   document.getElementById("questions").innerHTML =
     "QUESTION" +
+    " " +
     actualQuestion +
     '<span class="custompurpletext">' +
     "/" +
