@@ -71,10 +71,10 @@ wrongQ.innerText = incorrectAnswerPercent;
 
 // DOMANDE CORRETTE SU TOTALE 2/10
 const questionsCorrect = document.getElementById("questionscorrect");
-const correctAnswers = score;
+const correctAnswers = score + "/10 questions";
 questionsCorrect.innerText = correctAnswers;
 
 // DOMANDE SBAGLIATE SU TOTALE 8/10
 const questionsWrong = document.getElementById("questionswrong");
-const wrongAnswers = 10 - correctAnswers + "/10 questions";
+const wrongAnswers = 10 - score + "/10 questions";
 questionsWrong.innerText = wrongAnswers;

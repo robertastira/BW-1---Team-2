@@ -1,94 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
-
-body{
-
-    background-image: url(/Css/Assets/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 65px;
-    font-family: 'Outfit', sans-serif;
-    color: white;
+body {
+  background-image: url(/Css/Assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 65px;
+  font-family: "Outfit", sans-serif;
+  color: white;
 }
 
-body img{
-    width: 15%;
+body img {
+  width: 15%;
 }
 
 #question-container {
-    text-align: center;
+  text-align: center;
 }
 
 #txtquestion {
-    text-align: center;
+  text-align: center;
 }
 
 #txtquestion div {
-    font-size: 3em;
-    font-family: 'Outfit', sans-serif;
-    color: white;
-    font-weight: 300;
+  font-size: 3em;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  font-weight: 300;
 }
 
 #app {
-    position: absolute;
-    top: 6vh; /* Regola la distanza dal top */
-    right: 5vw; /* Allinea l'elemento a destra */
-    text-align: center;
+  position: absolute;
+  top: 6vh; /* Regola la distanza dal top */
+  right: 5vw; /* Allinea l'elemento a destra */
+  text-align: center;
 }
 
 #txtnumberedquestion {
-    text-align: center;
-    width: 70%;
-    margin: 4vh auto;
+  text-align: center;
+  width: 70%;
+  margin: 4vh auto;
 }
 
 #container-display {
-    margin: 10vh auto;
+  margin: 10vh auto;
 }
 
 button {
-    box-shadow: 0px 0px 5px 75% rgb(255, 255, 255);
-    -webkit-box-shadow: 0px 0px 5px 75% rgba(255, 255, 255, 0.042);
-    -moz-box-shadow: 0px 0px 5px 75% rgba(255, 255, 255, 0.468);
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.102);
-    border-radius: 42px;
-    border-top: 2px solid white;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 1em;
-    padding: 0.5em 2em;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #2f6627;
-    width: 40%;
-    height: 4em;
-    font-family:'Outfit', sans-serif; 
-    margin-bottom: 3vh;
-    margin-left: 3vw;
-    background-color: rgba(68, 65, 65, 0.11);
-    color: white;
-    text-align: center;
+  box-shadow: 0px 0px 5px 75% rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 0px 5px 75% rgba(255, 255, 255, 0.042);
+  -moz-box-shadow: 0px 0px 5px 75% rgba(255, 255, 255, 0.468);
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.102);
+  border-radius: 42px;
+  border-top: 2px solid white;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  width: 40%;
+  height: 4em;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 3vh;
+  margin-left: 3vw;
+  background-color: rgba(68, 65, 65, 0.11);
+  color: white;
+  text-align: center;
 }
 
 button:focus {
-    border-top: 2px solid #900080;
-    transition: 0.05s;
-    border-radius: 30px;
-    font-family:'Outfit', sans-serif;
-    margin-bottom: 3vh;
-    margin-left: 3vw;
-    background-color: #c811b3; 
-    color: white;
-    border-image-width: 5px;
+  border-top: 2px solid #900080;
+  transition: 0.05s;
+  border-radius: 30px;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 3vh;
+  margin-left: 3vw;
+  background-color: #c811b3;
+  color: white;
+  border-image-width: 5px;
 }
 
 .custompurpletext {
   color: #900080;
-  font-family:'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
   font-size: 22px;
 }
@@ -103,65 +101,64 @@ button:focus {
     width: 300px;
     height: 300px;
   } */
-  
-  .base-timer {
-    width: 130px; /* Imposta la larghezza desiderata */
-    height: 130px; /* Imposta l'altezza desiderata */
-    position: relative;
-  }
 
+.base-timer {
+  width: 130px; /* Imposta la larghezza desiderata */
+  height: 130px; /* Imposta l'altezza desiderata */
+  position: relative;
+}
 
-  .base-timer__svg {
-    transform: scaleX(-1);
-  }
-  
-  .base-timer__circle {
-    fill: none;
-    stroke: none;
-  }
-  
-  .base-timer__path-elapsed {
-    stroke-width: 10px;
-    stroke: white;
-  }
-  
-  .base-timer__path-remaining {
-    stroke-width: 10px;
-    stroke-linecap: round;
-    transform: rotate(90deg);
-    transform-origin: center;
-    transition: 1s linear all;
-    fill-rule: nonzero;
-    stroke: currentColor;
-  }
-  
-  .base-timer__path-remaining.green {
-    color: #990099;
-  }
-  
-  .base-timer__path-remaining.orange {
-    color: #990099;
-  }
-  
-  .base-timer__path-remaining.red {
-    color: red;
-  }
-  
-  .base-timer__label {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 4.4vh;
-    right: 2.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.base-timer__svg {
+  transform: scaleX(-1);
+}
 
-  #tempo{
-    font-size: 20px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    display: block;     
-    width: 100%;
-  }
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 10px;
+  stroke: white;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: #990099;
+}
+
+.base-timer__path-remaining.orange {
+  color: #990099;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 4.4vh;
+  right: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tempo {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+}
