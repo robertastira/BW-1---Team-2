@@ -22,7 +22,15 @@
     
     
     }
-    
+
+img{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 65px;
+    position: relative;
+
+}   
+
     main{
         
         text-align: center; 
@@ -75,7 +83,7 @@
     
     
         
-    }
+    
     .rating {
         background-image: url(/Css/Assets/star.svg)
     
