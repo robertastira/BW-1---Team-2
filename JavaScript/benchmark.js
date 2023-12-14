@@ -161,6 +161,9 @@ function setCircleDasharray() {
 
 let score = 0;
 let questionNumber = 0;
+function calculatePercentage(score, totalQuestions) {
+  return (score / totalQuestions) * 100;
+}
 const questions = [
   {
     category: "Science: Computers",
@@ -274,8 +277,8 @@ const displayMultipleChoice = function (question) {
       <button type="button" onclick='checkAnswer("${question.incorrect_answers[2]}")'>${question.incorrect_answers[2]}</button>
     `;
 };
-
-let actualQuestion = 1;
+const currentQuestion = questions[questionNumber];
+let actualQuestion = questions.indexOf(currentQuestion) + 1;
 let maxQuestion = questions.length;
 
 const displayQuestion = function () {
@@ -299,8 +302,9 @@ const displayQuestion = function () {
       buttonAnswerDiv.innerHTML = `${displayMultipleChoice(currentQuestion)}`;
     }
   } else {
-    // Il gioco è terminato, mostra il punteggio finale
-    alert("Quiz completato, il tuo punteggio è " + score);
+    const percentage = calculatePercentage(score, questions.length);
+    localStorage.setItem("quizPercentage", percentage);
+    window.location.href = "resultspage.html";
   }
 };
 //Funzione per visualizzare la prossima domanda
@@ -308,10 +312,13 @@ const displayNextQuestion = function () {
   // Se ci sono ancora domande, mostra la prossima
   if (questionNumber < questions.length - 1) {
     questionNumber++;
+    actualQuestion++;
     displayQuestion();
   } else {
     // Il gioco è terminato, mostra il punteggio finale
-    alert("Quiz completato, il tuo punteggio è " + score);
+    const percentage = calculatePercentage(score, questions.length);
+    localStorage.setItem("quizPercentage", percentage);
+    window.location.href = "resultspage.html";
     resetTimerAndCountDown(); // Resetta il timer quando il gioco è completato
   }
 };
@@ -324,6 +331,7 @@ const handleAnswer = function (userAnswer) {
     alert("Risposta errata!");
   }
 
+  localStorage.setItem("score", score);
   // Passa alla prossima domanda
   displayNextQuestion();
 };

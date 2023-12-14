@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 body {
-  background-image: url(./assets/bg.jpg);
+  background-image: url(../Css/Assets/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -19,11 +19,30 @@ body img {
   text-align: center;
 }
 
+#title h1 {
+  font-weight: 700;
+}
+
 h1 {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 70px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+#questionscorrect, #questionswrong{
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+h3 {
   font-family: "Outfit";
   font-weight: 700;
   font-size: 70px;
-  margin-top: 30px;
   margin-bottom: 0px;
 }
 
