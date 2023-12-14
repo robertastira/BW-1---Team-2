@@ -16,6 +16,14 @@ body {
   background-repeat: no-repeat;
 }
 
+img {
+  margin-left: 190px;
+  margin-right: 200px;
+  margin-top: 45px;
+  position: relative;
+  width: 9%;
+}
+
 main {
   text-align: center;
   margin: 5%;
