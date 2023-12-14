@@ -40,21 +40,6 @@ body img{
     margin: 6vh auto;
 }
 
-button::before {
-    content:"";
-	display:block;
-	position:absolute;
-    width: 21em;
-    height: 6em;
-
-    background-color: red;
-    margin-top: -27px;
-    margin-left: -12px;
-
-    border-radius: 30px;
-    z-index: -100;
-}
-
 button {
     border-top: 2px solid white;
     transition: 0.05s;
@@ -64,7 +49,7 @@ button {
     font-family:'Outfit', sans-serif;
     margin-bottom: 3vh;
     margin-left: 3vw;
-    background-color: rgba(221, 215, 215, 0.162); /* Un azzurro semi-trasparente */
+    background-color: rgba(221, 215, 215, 0.21); /* Un azzurro semi-trasparente */
     color: white;
     border-image-width: 5px; /* Larghezza della linea di sfumatura */
     }
