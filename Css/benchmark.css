@@ -10,6 +10,8 @@ body{
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 65px;
+    font-family: 'Outfit', sans-serif;
+    color: white;
 }
 
 body img{
@@ -31,22 +33,135 @@ body img{
     font-weight: 300;
 }
 
+#app {
+    position: absolute;
+    top: 6vh; /* Regola la distanza dal top */
+    right: 5vw; /* Allinea l'elemento a destra */
+    text-align: center;
+}
+
 #txtnumberedquestion {
     text-align: center;
     width: 70%;
     margin: 4vh auto;
 }
 
+#container-display {
+    margin: 10vh auto;
+}
+
 button {
+    box-shadow: 0px 0px 5px 75% rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 5px 75% rgba(255, 255, 255, 0.042);
+    -moz-box-shadow: 0px 0px 5px 75% rgba(255, 255, 255, 0.468);
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.102);
+    border-radius: 42px;
     border-top: 2px solid white;
-    transition: 0.03s;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
     width: 40%;
     height: 4em;
+    font-family:'Outfit', sans-serif; 
+    margin-bottom: 3vh;
+    margin-left: 3vw;
+    background-color: rgba(68, 65, 65, 0.11);
+    color: white;
+    text-align: center;
+}
+
+button:focus {
+    border-top: 2px solid #900080;
+    transition: 0.05s;
     border-radius: 30px;
     font-family:'Outfit', sans-serif;
     margin-bottom: 3vh;
     margin-left: 3vw;
-    background-color: rgba(68, 65, 65, 0.11); /* Un azzurro semi-trasparente */
+    background-color: #c811b3; 
     color: white;
-    border-image-width: 3px; /* Larghezza della linea di sfumatura */
+    border-image-width: 5px;
 }
+
+.custompurpletext {
+  color: #900080;
+  font-family:'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+#questions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* .base-timer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  } */
+  
+  .base-timer {
+    width: 130px; /* Imposta la larghezza desiderata */
+    height: 130px; /* Imposta l'altezza desiderata */
+    position: relative;
+  }
+
+
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 10px;
+    stroke: white;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: #990099;
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: #990099;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 4.4vh;
+    right: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #tempo{
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    display: block;     
+    width: 100%;
+  }
