@@ -1,0 +1,122 @@
+body{
+    background-color: black;
+}
+
+
+#wrapper {
+    display: flex;
+    position: absolute;
+    background-image: url("/Css/Assets/bg.jpg");
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
+    height: 100%;
+
+
+}
+
+#wrapper img {
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 15%;
+    @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Roboto:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Outfit:wght@600&family=Roboto:ital@1&display=swap');
+    *{
+        font-family: 'Inter', sans-serif;
+       
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
+    
+    
+    h1{
+        font-family: 'Outfit', sans-serif;
+    }
+    
+    body{
+        background-image: url(./Assets/bg.jpg); 
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+    
+    
+    img{
+    
+    margin: 30px 60px;
+    
+    }
+    
+    main{
+        
+        text-align: center; 
+        margin: 5%;
+        width: auto;
+        height: auto;
+        color: white;
+        font-size: 21px;
+    }
+    h1{
+        
+        font-size: 60px;
+    }
+    
+    
+    
+    button{
+        
+        margin-right: auto;
+        text-align: center;
+        margin-left: auto;
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-right: 40px;
+        padding-bottom: 20px;
+        font-family: 'Inter', sans-serif;
+        color: black;
+        background-color: #00FFFF;
+        font-weight: 700;
+        font-size: 17px;
+        box-shadow: 1px 1px 28px 1px #00FFFF;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #feedback{
+        border: none;
+        border-bottom: 2px solid rgb(167, 0, 135);
+        background-color: transparent;
+        width: 600px;
+        color: white;
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+    #submit1{
+         
+        font-size: 16px; 
+        font-weight: bold;
+    }
+    
+    
+        
+    }
+    .rating {
+        background-image: url(/Css/Assets/star.svg)
+    
+    }
+    
+    .stars{
+        opacity: 20%;
+        display: inline;
+        padding-bottom: 50px;
+        
+    }
+    
+    .stars.selected{
+        opacity: 100%;
+    display: inline;
+    padding-bottom: 50px;
+    }
+     
