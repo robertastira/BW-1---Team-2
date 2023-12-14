@@ -57,3 +57,15 @@ function textCenter(val) {
     },
   });
 }
+
+// PERCENTUALE CORRETTE
+const correctQ = document.getElementById("percentagecorrect");
+
+// PERCENTUALE SBAGLIATE
+const wrongQ = document.getElementById("percentagewrong");
+
+// DOMANDE CORRETTE SU TOTALE 2/10
+const questionsCorrect = document.getElementById("questionscorrect");
+
+// DOMANDE SBAGLIATE SU TOTALE 8/10
+const questionsWrong = document.getElementById("questionswrong");
