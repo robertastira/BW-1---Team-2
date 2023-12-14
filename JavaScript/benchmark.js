@@ -161,6 +161,9 @@ function setCircleDasharray() {
 
 let score = 0;
 let questionNumber = 0;
+function calculatePercentage(score, totalQuestions) {
+  return (score / totalQuestions) * 100;
+}
 const questions = [
   {
     category: "Science: Computers",
@@ -299,8 +302,9 @@ const displayQuestion = function () {
       buttonAnswerDiv.innerHTML = `${displayMultipleChoice(currentQuestion)}`;
     }
   } else {
-    // Il gioco è terminato, mostra il punteggio finale
-    alert("Quiz completato, il tuo punteggio è " + score);
+    const percentage = calculatePercentage(score, questions.length);
+    localStorage.setItem("quizPercentage", percentage);
+    window.location.href = "resultspage.html";
   }
 };
 //Funzione per visualizzare la prossima domanda
@@ -312,7 +316,9 @@ const displayNextQuestion = function () {
     displayQuestion();
   } else {
     // Il gioco è terminato, mostra il punteggio finale
-    alert("Quiz completato, il tuo punteggio è " + score);
+    const percentage = calculatePercentage(score, questions.length);
+    localStorage.setItem("quizPercentage", percentage);
+    window.location.href = "resultspage.html";
     resetTimerAndCountDown(); // Resetta il timer quando il gioco è completato
   }
 };
@@ -325,6 +331,7 @@ const handleAnswer = function (userAnswer) {
     alert("Risposta errata!");
   }
 
+  localStorage.setItem("score", score);
   // Passa alla prossima domanda
   displayNextQuestion();
 };

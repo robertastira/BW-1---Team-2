@@ -1,6 +1,7 @@
 // QUESTO SERVE PER INSERIRE IL VALORE DELLA PARCENTUALE DI RISPOSTE ESATTE
-var value = 60;
-var data = {
+let value = localStorage.getItem("quizPercentage") || 0;
+let score = localStorage.getItem("score");
+let data = {
   labels: ["My val", ""],
   datasets: [
     {
@@ -60,12 +61,20 @@ function textCenter(val) {
 
 // PERCENTUALE CORRETTE
 const correctQ = document.getElementById("percentagecorrect");
+const correctAnswerPercent = value + "%";
+correctQ.innerText = correctAnswerPercent;
 
 // PERCENTUALE SBAGLIATE
 const wrongQ = document.getElementById("percentagewrong");
+const incorrectAnswerPercent = 100 - value + "%";
+wrongQ.innerText = incorrectAnswerPercent;
 
 // DOMANDE CORRETTE SU TOTALE 2/10
 const questionsCorrect = document.getElementById("questionscorrect");
+const correctAnswers = score;
+questionsCorrect.innerText = correctAnswers;
 
 // DOMANDE SBAGLIATE SU TOTALE 8/10
 const questionsWrong = document.getElementById("questionswrong");
+const wrongAnswers = 10 - correctAnswers + "/10 questions";
+questionsWrong.innerText = wrongAnswers;
