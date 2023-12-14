@@ -1,27 +1,4 @@
-body{
-    background-color: black;
-}
 
-
-#wrapper {
-    display: flex;
-    position: absolute;
-    background-image: url("/Css/Assets/bg.jpg");
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 65%;
-    height: 100%;
-
-
-}
-
-#wrapper img {
-    margin-left: 100px;
-    margin-top: 50px;
-    width: 15%;
     @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Roboto:ital@1&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Outfit:wght@600&family=Roboto:ital@1&display=swap');
     *{
@@ -43,9 +20,6 @@ body{
        
     
     
-    img{
-    
-    margin: 30px 60px;
     
     }
     
