@@ -40,6 +40,21 @@ body img{
     margin: 6vh auto;
 }
 
+button::before {
+    content:"";
+	display:block;
+	position:absolute;
+    width: 21em;
+    height: 6em;
+
+    background-color: red;
+    margin-top: -27px;
+    margin-left: -12px;
+
+    border-radius: 30px;
+    z-index: -100;
+}
+
 button {
     border-top: 2px solid white;
     transition: 0.05s;
@@ -52,13 +67,11 @@ button {
     background-color: rgba(221, 215, 215, 0.162); /* Un azzurro semi-trasparente */
     color: white;
     border-image-width: 5px; /* Larghezza della linea di sfumatura */
-}
+    }
 
 button:focus {
     border-top: 2px solid #900080;
     transition: 0.05s;
-    width: 40%;
-    height: 5em;
     border-radius: 30px;
     font-family:'Outfit', sans-serif;
     margin-bottom: 3vh;
@@ -86,16 +99,3 @@ button:focus {
     font-size: 22px;
 }
 
-.clicked{
-    border-top: 2px solid #dc2cc7;
-    transition: 0.05s;
-    width: 40%;
-    height: 5em;
-    border-radius: 30px;
-    font-family:'Outfit', sans-serif;
-    margin-bottom: 3vh;
-    margin-left: 3vw;
-    background-color: #eb41d7; /* Un azzurro semi-trasparente */
-    color: white;
-    border-image-width: 5px; /* Larghezza della linea di sfumatura */
-}
