@@ -111,7 +111,7 @@ button:focus {
 .base-timer__svg {
   transform: scaleX(-1);
 }
-
+/* cerchio */
 .base-timer__circle {
   fill: none;
   stroke: none;
@@ -143,16 +143,19 @@ button:focus {
 .base-timer__path-remaining.red {
   color: red;
 }
-
+/* timer */
 .base-timer__label {
-  position: absolute;
-  width: 60px;
-  height: 60px;
+  position: fixed;
+  width: 135px;
+  height: 154px;
   top: 4.4vh;
-  right: 2.5vw;
+  right: auto;
+  left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: none;
+  stroke: none;
 }
 
 #tempo {
