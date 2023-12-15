@@ -102,18 +102,19 @@ button {
   text-align: center;
 }
 
-.TitleInside {
+#TitleInside {
   font-family: "Inter";
   font-size: 1.2em;
   font-weight: 800;
 }
 
 #color-blue {
+  font-size: 0.9em;
   padding-top: 3px;
   color: #00ffff;
 }
 
-.micro {
+#micro {
   font-family: "Inter";
   font-size: 0.9em;
   width: 210px;

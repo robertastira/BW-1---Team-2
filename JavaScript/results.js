@@ -78,3 +78,21 @@ questionsCorrect.innerText = correctAnswers;
 const questionsWrong = document.getElementById("questionswrong");
 const wrongAnswers = 10 - score + "/10 questions";
 questionsWrong.innerText = wrongAnswers;
+
+const displayResults = function () {
+  const titleResults = document.getElementById("TitleInside");
+  const subtitleResults = document.getElementById("micro");
+  if (score > 5) {
+    titleResults.innerHTML = `<h4>Congratulations!</h4>
+    <h4 id="color-blue">You passed the exam.</h4>`;
+    subtitleResults.innerHTML = `<p>We'll send you the certificate in few minutes.</p>
+    <p>Check your email (including promotions / spam folder)</p>`;
+  } else {
+    titleResults.innerHTML = `<h4>We are sorry!</h4>
+    <h4 id="color-blue">You've not passed the exam.</h4>`;
+    subtitleResults.innerHTML = `<p>We'll send you some links for study in few minutes.</p>
+    <p>Check your email (including promotions / spam folder)</p>`;
+  }
+};
+
+displayResults();
