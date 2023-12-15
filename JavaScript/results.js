@@ -5,8 +5,8 @@ let data = {
   labels: ["My val", ""],
   datasets: [
     {
-      data: [value, 100 - value],
-      backgroundColor: ["#00ffff", "#d20094"],
+      data: [100 - value, value],
+      backgroundColor: ["#d20094", "#00ffff"],
       //   hoverBackgroundColor: ["#FF6384", "#AAAAAA"],
       //   hoverBorderColor: ["#FF6384", "#ffffff"],
     },
