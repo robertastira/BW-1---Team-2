@@ -133,7 +133,7 @@ button:focus {
 }
 
 .base-timer__path-remaining.green {
-  color: #990099;
+  color: #00ffff;
 }
 
 .base-timer__path-remaining.orange {
